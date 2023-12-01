@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="/logout/" style="text-decoration: none; color: red;">
+                Log out
+</a>
+{% for i in maqolalar %}
+<h1><a href="malumot/">{{i.sarlavha}}</a></h1>
+{% endfor %}
+<form method="post">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit">Qoshish</button>
+</form>
+</body>
+</html>
